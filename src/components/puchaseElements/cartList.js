@@ -16,7 +16,7 @@ const CartList = ({productData}) => {
                         </div>
             }) }
             
-            <button className="btn btn-secondary purchaseButton">Complete purchase</button>
+            <button className="btn btn-secondary purchaseButton">Complete the purchase</button>
         </div>
     )
 }
