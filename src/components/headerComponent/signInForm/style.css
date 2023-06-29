@@ -1,0 +1,21 @@
+.signInForm{
+    margin:auto;
+    width: 35%;
+    border: 1px solid black;
+    padding: 30px 25px 10px;
+}
+@media screen and (max-width:540px) {
+    .signInForm{
+        width: 80%;
+    }
+}
+.signInForm input{
+    border: 1px solid black;
+}
+.signInButton{
+    width: 25%;
+    margin: 40px 38%;
+}
+.signInFormBlock{
+    padding-top: 100px;
+}

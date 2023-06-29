@@ -1,0 +1,8 @@
+.itemCard{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding-top: 80px;
+
+}

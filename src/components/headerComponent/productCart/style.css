@@ -1,0 +1,24 @@
+.basketIcon{
+    width: 25px;
+    height: 25px;
+}
+.basketBlock{
+    margin: 0 25px;
+}
+.counter{
+    font-size: 13px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    color: white;
+    border-radius: 100%;
+    background-color: tomato;
+    position: fixed;
+    right: 100px;
+    top: 3%;
+}
+@media screen and (max-width:540px) {
+    .counter{
+        right: 70px;
+    }
+}

@@ -1,0 +1,13 @@
+.menuButtonIcon{
+    width: 40px;
+    height: 30px;
+    transition: 0.3s;
+}
+.menuButtonIcon:hover{
+    transition: 0.3s;
+    width: 43px;
+    height: 33px;
+}
+.offCanvas{
+    background-color: rgb(97, 96, 96);
+}

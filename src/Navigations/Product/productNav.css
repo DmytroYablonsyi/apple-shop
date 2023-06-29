@@ -1,0 +1,17 @@
+.productList{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 90px;
+}
+a{
+    text-decoration: none;
+    transition: 0.3s ease;
+    color: white;
+}
+a:hover{
+    font-size: 18px;
+    transition: 0.3s;
+}
+
