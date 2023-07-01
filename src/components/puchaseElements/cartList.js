@@ -1,9 +1,8 @@
 import React from "react";
 import "./cartList.css"
+import OrderNav from "../../Navigations/OrderNav/orderNav";
 
-const purchaseData = [];
-
-const CartList = ({productData}) => { 
+const CartList = ({productData, setClose}) => { 
     return (
         <div>
             {productData.map((item) => {
@@ -16,7 +15,7 @@ const CartList = ({productData}) => {
                         </div>
             }) }
             
-            <button className="btn btn-secondary purchaseButton">Complete the purchase</button>
+            <button onClick={setClose} className="btn btn-secondary purchaseButton"><OrderNav/></button>
         </div>
     )
 }

@@ -1,21 +1,34 @@
-import React from "react"
+import React,{useState} from "react"
 import "./style.css"
 import CartList from "../../puchaseElements/cartList"
 
+import Button from 'react-bootstrap/Button';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+
 
 const ProductCart = ({productData}) => {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+  
     return (
     <div className="basketBlock">
-        <div className="counter">{productData.length}</div>
-        <button className="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><img className="basketIcon" src="https://www.iconpacks.net/icons/2/free-add-to-basket-icon-3042-thumb.png"></img></button>
-        <div className="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabIndex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-                <div className="offcanvas-header">
-                    <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div> 
-                <div className="offcanvas-body">
-                    <CartList productData={productData}/>
-                </div>
-        </div>
+         <div>
+         <div className="counter">{productData.length}</div>
+        <Button onClick={handleShow} className="menuButton" variant="light">
+        <img className="basketIcon" src="https://www.iconpacks.net/icons/2/free-add-to-basket-icon-3042-thumb.png"></img>
+        </Button>
+
+        <Offcanvas placement="end" show={show} onHide={handleClose}>
+            <Offcanvas.Header closeButton>
+                <Offcanvas.Title></Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body className="offcanvas-body ">
+            <CartList setClose={handleClose} productData={productData}/>
+            </Offcanvas.Body>
+        </Offcanvas>
+    </div>
     </div>
             )
 }

@@ -10,6 +10,7 @@ import AppleWatch from "../pages/applewatch";
 import Header from "../components/headerComponent/header";
 import Home from "../pages/home";
 import SignInForm from "../components/headerComponent/signInForm";
+import OrderPage from "../pages/orderPage";
 
 
 const Routes = () => {
@@ -29,6 +30,9 @@ const Routes = () => {
             ...state.slice(index + 1)
         ])
     }
+    const deleteOrderList = () => {
+        setState([])
+    }    
     return (
         <div>
             <HashRouter>
@@ -43,6 +47,7 @@ const Routes = () => {
                         <Route path="/airpods" element={<AirPods deleteProductItem={deleteItem} setProductData={addCartListItem}/>}/>
                         <Route path="/applewatch" element={<AppleWatch  deleteProductItem={deleteItem} setProductData={addCartListItem}/>}/>
                         <Route path="/" element={<Home/>}/>
+                        <Route path="/order-page" element={<OrderPage deleteList={deleteOrderList} orderData={state}/>}/>
                         <Route path="/signin" element={<SignInForm handleName={handleName}/>}/>
                     </ReactRouterRoutes>
                 </div>

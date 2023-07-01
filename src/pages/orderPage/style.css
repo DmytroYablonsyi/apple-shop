@@ -1,0 +1,45 @@
+.orderBlock{
+    text-align: center;
+    color: white;
+    padding-top: 200px;
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+}
+.content{
+    text-align: center;
+    color: white;
+    padding-top: 200px;
+    background-color: black;
+    height: fit-content;
+    width: 100%;
+}
+.emptyCartBlock{
+    height: 75vh;
+}
+h1{
+    font-size: 100px;
+}
+@media screen and (max-width:540px) {
+    h1{
+        font-size: 60px;
+    }
+}
+.orderList{
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    margin: 10px;
+}
+.orderList img{
+    width: 100px;
+    height: 100px;
+}
+.select{
+    width: 40%;
+    margin:20px auto;
+}
+.confirm{
+    margin: 40px;
+}

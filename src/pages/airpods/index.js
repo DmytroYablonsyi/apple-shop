@@ -47,7 +47,12 @@ const AirPods = ({setProductData, deleteProductItem}) => {
     return (
         <div className="itemCard">
             {state.map((item) => {
-              return <ProductListItem id={item.id} key={item.name} name={item.name} price={item.price} image={item.img} deleteProduct={deleteProductItem} buyProduct={addProductData} />
+              return <ProductListItem 
+                id={item.id}
+                key={item.name} name={item.name} 
+                price={item.price} image={item.img} 
+                deleteProduct={deleteProductItem} 
+                buyProduct={addProductData} />
             })}
         </div>
     )
