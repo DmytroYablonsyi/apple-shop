@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import ProductListItem from "../../components/puchaseElements/productList";
 import "./style.css"
-import { key } from "localforage";
 
 
 const initialAirPodsData = [
