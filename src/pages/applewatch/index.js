@@ -56,10 +56,10 @@ const AppleWatch = ({setProductData, deleteProductItem}) => {
     const [state, setState] = useState(initialAirPodsData);
 
 console.log(state)
-    // const handleStatus = (id) => {
-    //     state[id].status = !state[id].status
+    const handleStatus = (id) => {
+        state[id].status = !state[id].status
     
-    // }
+    }
 console.log(state)
     const addProductData = (productData) => {
         setProductData(productData);
@@ -74,6 +74,7 @@ console.log(state)
                 price={item.price} image={item.img} 
                 deleteProduct={deleteProductItem}
                 status={item.status} 
+                setStatus={handleStatus}
                 buyProduct={addProductData} />
             })}
         </div>
