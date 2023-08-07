@@ -1,16 +1,18 @@
 .signInForm{
-    margin:auto;
-    width: 35%;
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin:100px auto;
+    width:50%;
+    border: 1px solid grey;
+    border-radius: 2%;
     padding: 30px 25px 10px;
 }
 @media screen and (max-width:540px) {
     .signInForm{
         width: 80%;
     }
-}
-.signInForm input{
-    border: 1px solid black;
 }
 .signInButton{
     width: 25%;

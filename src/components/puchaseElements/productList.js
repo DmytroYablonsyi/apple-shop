@@ -2,20 +2,21 @@ import React, { useState } from "react";
 
 import "./productList.css"
 
-const ProductListItem = ({name, price,image,buyProduct,id, deleteProduct}) => { 
+const ProductListItem = ({name, price,image,buyProduct,id,status,setStatus, deleteProduct}) => { 
 
-    const [active,setActive] = useState(false)
+    const [active,setActive] = useState(status)
 
     const deleteProductData = () => {
-        setActive((prev) => !prev);
-        deleteProduct(id);
+        setActive((prev) => !prev)
+        deleteProduct(name);
+        setStatus(id)
     }
-
     const addProductData = () => {
         buyProduct({name,price,image,id});
-        setActive((prev) => !prev);
+        setActive((prev) => !prev)
+        setStatus(id)
     }
-
+    console.log(status)
     return (
         <div className="productListItem">
             <div className="imageBlock">{<img src={image}></img>}</div>

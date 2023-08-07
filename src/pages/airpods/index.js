@@ -9,36 +9,48 @@ const initialAirPodsData = [
     name: "Airpods 2",
     price: "180 $",
     img:"https://t3.ftcdn.net/jpg/04/08/38/46/360_F_408384606_CocvDPtOfuI8MORS8DpRFMn71TNtWdDZ.jpg",
-    id: "0" 
+    id: "0",
+    status: false
 } ,
     {
     name: "Airpods 3",
     price: "200 $",
     img:"https://www.istore.ua/upload/iblock/06c/y6gy7mb5nkj14ijpck7vfa9xb41b727t/apple_airpods_3_11_is.jpg",
-    id: "1" 
+    id: "1",
+    status: false
 },
      {
     name: "Airpods Pro",
     price: "220 $",
     img:"https://www.istore.ua/upload/iblock/381/apple_airpods_pro_bluetooth_qi_1_.jpeg",
-    id: "2" 
+    id: "2" ,
+    status: false
 },
      {
     name: "Airpods Pro2",
     price: "220 $",
     img:"https://www.istore.ua/upload/iblock/34e/g75oa5p9qkc9i01oic5xyb2mymewbes0/MQD83_5_is.png",
-    id: "3" },
+    id: "3",
+    status: false
+ },
      {
     name: "Airpods Max",
     price: "660 $",
     img:"https://www.istore.ua/upload/iblock/458/apple_airpods_max_silver.jpg",
-    id: "4" 
+    id: "4",
+    status: false
 }
 ]
 const AirPods = ({setProductData, deleteProductItem}) => {
 
     const [state, setState] = useState(initialAirPodsData);
 
+
+    const handleStatus = (id) => {
+        state[id].status = !state[id].status
+    
+    }
+console.log(state)
     const addProductData = (productData) => {
         setProductData(productData);
     }
@@ -50,7 +62,9 @@ const AirPods = ({setProductData, deleteProductItem}) => {
                 id={item.id}
                 key={item.name} name={item.name} 
                 price={item.price} image={item.img} 
-                deleteProduct={deleteProductItem} 
+                deleteProduct={deleteProductItem}
+                status={item.status} 
+                setStatus={handleStatus}
                 buyProduct={addProductData} />
             })}
         </div>

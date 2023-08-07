@@ -23,8 +23,8 @@ const Routes = () => {
     const addCartListItem = (item) => {
         setState((prev) => [...prev, item])
     }
-    const deleteItem = (id) => {
-        const index = state.findIndex((el) => el.id === id);
+    const deleteItem = (name) => {
+        const index = state.findIndex((el) => el.name === name);
       setState([
             ...state.slice(0,index),
             ...state.slice(index + 1)
